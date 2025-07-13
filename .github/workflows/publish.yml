@@ -8,7 +8,7 @@ on:
 
 jobs:
   build-and-push:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     permissions:
       contents: write
       packages: write
@@ -41,7 +41,7 @@ jobs:
         run: make compose-proxy/build
         
   create-release:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     needs: build-and-push
     permissions:
       contents: write
